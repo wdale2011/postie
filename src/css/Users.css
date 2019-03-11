@@ -1,0 +1,7 @@
+.users .columns {
+  display: flex;
+}
+
+.users .columns > * {
+  flex: 0 0 50%;
+}

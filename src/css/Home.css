@@ -1,0 +1,18 @@
+.home {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.home h1 {
+  font-size: 5rem;
+  flex: 1 0 auto;
+  text-align: right;
+  margin: 0;
+  padding: 0px 5vw;
+}
+
+.home h1 .welcome-to {
+  font-size: 40%;
+}

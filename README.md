@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## TODO
+
+1. routes for User
+2. styles
+
 ## Available Scripts
 
 In the project directory, you can run:

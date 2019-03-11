@@ -1,0 +1,23 @@
+.user-list ul {
+  list-style: none;
+}
+
+.user-list ul li {
+  background-color: #f0f0f0;
+  padding: 1.5rem 15px;
+}
+
+.user-list ul li:nth-child(2n) {
+  background-color: #d1d1d1;
+}
+
+.user-list ul li p {
+  font-size: 110%;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.user-list ul li a.details {
+  text-decoration: none;
+  color: rgba(32, 32, 32, 0.6);
+}

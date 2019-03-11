@@ -1,0 +1,29 @@
+header {
+  background: linear-gradient(
+    to right,
+    #173f5f,
+    #20639b,
+    #3caea3,
+    #f6d55c,
+    #ed553b
+  );
+}
+
+nav {
+  max-width: 90%;
+  margin: auto;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 15px 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  border-bottom: 1px solid #fff;
+}
