@@ -1,9 +1,22 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## TODO
+## Steps
 
-1. routes for User
-2. styles
+1. Install `react-router-dom`
+2. Create `AppRouter` component
+3. Create header with links to home, posts, users
+4. `render` Not Found page
+5. `PostList`
+   1. get initial posts
+   2. pagination
+6. Post Details: need a link and an added Route
+   1. Load inital state from `match.params`
+7. `Users`
+   1. Load initial data from API
+8. `UserList` needs link to individual Users: pass in state
+9. create `UserDetails`
+   1. Need to get `state` from `props.location`
+   2. Change to functional component
 
 ## Available Scripts
 
