@@ -4,17 +4,20 @@
 2. Create `AppRouter` component
 3. Create header with links to home, posts, users
 4. `render` Not Found page
-5. `PostList`
+5. Show off active styling
+6. `PostList`
    1. get initial posts
    2. pagination
-6. Post Details: need a link and an added Route
+   3. link to details
+7. Post Details: need a link and an added Route
    1. Load inital state from `match.params`
-7. `Users`
+8. `Users`
    1. Load initial data from API
-8. `UserList` needs link to individual Users: pass in state
-9. create `UserDetails`
-   1. Need to get `state` from `props.location`
-   2. Change to functional component
+   2. Add nested Route
+9. `UserList` needs link to individual Users: pass in state
+10. create `UserDetails`
+    1. Need to get `state` from `props.location`
+    2. Change to functional component
 
 ## Available Scripts
 

@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
 import UserList from './UserList'
-import UserDetails from './UserDetails'
-import API from '../API'
 
 import '../css/Users.css'
 
@@ -15,18 +12,12 @@ class Users extends Component {
     }
   }
 
-  componentDidMount = () => {
-    API.getAllUsers().then(res => this.setState({ users: res.data }))
-  }
-
   render() {
     return (
       <div className="users container">
         <h2>Users</h2>
         <div className="columns">
           <UserList users={this.state.users} />
-
-          <Route path="/users/:userId" component={UserDetails} />
         </div>
       </div>
     )

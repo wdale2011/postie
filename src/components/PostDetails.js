@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import API from '../API'
 import '../css/PostDetails.css'
 
 export default class PostDetails extends Component {
@@ -10,23 +9,6 @@ export default class PostDetails extends Component {
       post: {},
       comments: [],
       postedBy: {},
-    }
-  }
-
-  componentDidMount() {
-    API.getPost(this.props.match.params.postId).then(res =>
-      this.setState({ post: res.data })
-    )
-  }
-
-  componentDidUpdate = (prevProps, prevState) => {
-    if (!prevState.post.id) {
-      API.getPostComments(this.state.post.id).then(res =>
-        this.setState({ comments: res.data })
-      )
-      API.getUser(this.state.post.userId).then(res =>
-        this.setState({ postedBy: res.data })
-      )
     }
   }
 
