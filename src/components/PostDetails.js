@@ -1,19 +1,42 @@
-import React, { Component } from 'react'
-import '../css/PostDetails.css'
+import React, { Component } from "react";
+import API from "../API";
+import "../css/PostDetails.css";
 
 export default class PostDetails extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       post: {},
       comments: [],
-      postedBy: {},
-    }
+      postedBy: {}
+    };
   }
 
+  componentDidMount = async () => {
+    const promise1 = this.getPostWithUser();
+    const promise2 = this.getComments();
+    await Promise.all([promise1, promise2]);
+    console.log("all content loaded!");
+  };
+
+  getPostWithUser = async () => {
+    const postResponse = await API.getPost(this.props.match.params.postId);
+    this.setState({ post: postResponse.data });
+    const userResponse = await API.getUser(postResponse.data.userId);
+    this.setState({ postedBy: userResponse.data });
+  };
+
+  getComments = async () => {
+    const commentsResponse = await API.getPostComments(
+      this.props.match.params.postId
+    );
+    this.setState({ comments: commentsResponse.data });
+  };
+
   render() {
-    const { post, postedBy, comments } = this.state
+    // Object destructuring
+    const { post, postedBy, comments } = this.state;
     return (
       <div className="post-details container">
         <h2>{post.title}</h2>
@@ -32,6 +55,6 @@ export default class PostDetails extends Component {
           </ul>
         </div>
       </div>
-    )
+    );
   }
 }
